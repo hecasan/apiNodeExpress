@@ -1,5 +1,9 @@
 const router = require('express').Router();
 
-router.post('/', (req, res, next) => res.json({ success: true}))
+// Importar controllers
+
+const UsuarioController = require('./controllers/UsuarioController')
+
+router.post('/login', UsuarioController.login)
 
 module.exports = router;
