@@ -1,15 +1,14 @@
 const Sequelize = require('sequelize');
 
-const database = process.env.DATABASE;
-const username = process.env.USERNAME;
-const password = process.env.PASSWORD;
-const host = process.env.HOST;
-const dialect = process.env.DIALECT;
+const username = process.env.DBUSER;
+const password = process.env.DBPASS;
+const database = process.env.DBDATABASE;
+const host = process.env.DBHOST;
+const dialect = process.env.DBDIALECT;
 
 const conexao = new Sequelize(database, username, password, {
     host,
     dialect
 })
-
 
 module.exports = conexao;
